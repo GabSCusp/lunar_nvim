@@ -11,7 +11,7 @@ end,
 local gruvbox = {
 "ellisonleao/gruvbox.nvim",
 config = function ()
-    require('gruvbox').setup({inverse = true, transparent_mode = true, bold = true})
+    require('gruvbox').setup({inverse = false, transparent_mode = true, bold = true})
 end
 }
 
