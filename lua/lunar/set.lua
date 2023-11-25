@@ -7,7 +7,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.o.laststatus = 3
-vim.o.cmdheight = 0
+
 
 -- Mostrar a barra de comando quando gravando um macro --
 vim.api.nvim_create_autocmd({ "RecordingEnter" }, {
@@ -21,3 +21,15 @@ vim.api.nvim_create_autocmd({ "RecordingLeave" }, {
              end,
 })
 ----------------------------------------------------------
+
+-- Mostrar a barra de comando quando entrar em modo de comando --
+vim.cmd[[
+  augroup CmdHeight
+    autocmd!
+    autocmd VimEnter * set cmdheight=0 
+    autocmd CmdlineEnter * set cmdheight=1
+    autocmd CmdlineLeave * set cmdheight=0
+  augroup END
+]]
+-----------------------------------------------------------------
+

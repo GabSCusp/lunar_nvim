@@ -8,11 +8,4 @@ config = function()
 end,
 }
 
-local gruvbox = {
-"ellisonleao/gruvbox.nvim",
-config = function ()
-    require('gruvbox').setup({inverse = false, transparent_mode = true, bold = true})
-end
-}
-
 return one_monokai
